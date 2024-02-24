@@ -1,3 +1,6 @@
+
+# homeWork_2
+
 # num =int(input('enter a four-digit number:'))
 # last = num % 10
 # first = int(num/1000)
@@ -7,6 +10,10 @@
 # print(second)
 # print(third)
 # print(last)
+
+
+
+# homeWork_3
 
 
 num =int(input('enter a five-digit number:'))
