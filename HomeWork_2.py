@@ -1,5 +1,5 @@
 
-homeWork_2
+# homeWork_2
 
 num =int(input('enter a four-digit number:'))
 last = num % 10
