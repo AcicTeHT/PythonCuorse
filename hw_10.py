@@ -5,11 +5,7 @@ name = input("your wariable name:")
 pnkt = string.punctuation
 lm_list = keyword.kwlist
 
-i = 0
-while i < len(name):
-    if name[i].isspace():
-        print("False")
-    i += 1
+
 for i in pnkt:
     for j in name:
         if j == "_":
@@ -18,8 +14,9 @@ for i in pnkt:
         elif i == j:
             print('a')
             # print("False")
-
-if name[0].isdigit() or name.isdigit():
+if len(name.split()) > 1:
+    print("False")
+elif name[0].isdigit() or name.isdigit():
     print("False_1")
 elif not name.islower() or keyword.iskeyword(name):
     print("False_2")
