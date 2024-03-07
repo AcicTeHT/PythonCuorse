@@ -10,4 +10,5 @@ for i in pnkt:
             name = name.replace(j,"")
 if len(name) > 140:
     print("#" + name[:140])
-print("#" + name)
+else:
+    print("#" + name)
