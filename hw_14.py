@@ -1,29 +1,29 @@
 
-nums = input("Enter your number: ")
+num = input("Enter your number: ")
+mod = ([int(i) for i in num])
+mod = tuple(mod)
 
-nums = ([int(i) for i in nums])
-
-res = 0
-
-for i in nums:
-    res = nums[0] * nums[1] * nums[2]
-    print(res)
-
-
-
-
-
-#
-
-
-
-
-
-
-
-
-
-
-
+while mod:
+    if len(mod) == 4:
+        res = mod[0] * mod[1] * mod[2] * mod[3]
+        res = str(res)
+        mod = tuple(res)
+        mod = ([int(i) for i in mod])
+        # print(res)
+    elif len(mod) == 3:
+        res = mod[0] * mod[1] * mod[2]
+        res = str(res)
+        mod = tuple(res)
+        mod = ([int(i) for i in mod])
+        # print(res)
+    elif len(mod) == 2:
+        res = mod[0] * mod[1]
+        res = str(res)
+        mod = tuple(res)
+        mod = ([int(i) for i in mod])
+        # print(res)
+    elif len(mod) == 1:
+        print(mod[0])
+        break
 
 
