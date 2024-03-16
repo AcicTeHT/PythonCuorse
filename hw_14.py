@@ -2,7 +2,8 @@
 num = input("Enter your number: ")
 # mod = ([int(i) for i in num])
 # mod = tuple(mod)
-#
+
+
 # while mod:
 #     if len(mod) == 4:
 #         res = mod[0] * mod[1] * mod[2] * mod[3]
