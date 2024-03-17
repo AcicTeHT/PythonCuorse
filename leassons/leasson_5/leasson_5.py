@@ -16,3 +16,6 @@ n = ([2, 5, 6, 5, 4, 4, 4, 4, 3, 2, 2, 2, 2, 3])
 # n = ("ywte3475eryt3478e477477474")
 print(histogram(n))
 # variable = {key: value for key in iterable if something}
+
+
+
