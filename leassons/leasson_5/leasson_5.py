@@ -1,21 +1,20 @@
-# n = set(range(10))
-# n.add(11)
+
+
+# log_file = ["error", "type_error", "my_error", "no"]
 #
-# print(n)
+# err_gen = (st for st in log_file if "error" in st)
+# print(err_gen)
+# for item in err_gen:
+#     print(item)
 
-def histogram(s):
-    d = dict()
-    for i in s:
-        if i not in d:
-            # print(i)
-            d[i] = 1
-        else:
-            d[i] = d[i] + 1 # або d[c] += 1
-    return d
-n = ([2, 5, 6, 5, 4, 4, 4, 4, 3, 2, 2, 2, 2, 3])
-# n = ("ywte3475eryt3478e477477474")
-print(histogram(n))
-# variable = {key: value for key in iterable if something}
-
+def f_gen(m):
+    s = 1
+    for n in range(1,m):
+        yield n**2 + s
+        s += 1
+a = f_gen(5)
+print(a)
+for i in a:
+    print(i)
 
 
