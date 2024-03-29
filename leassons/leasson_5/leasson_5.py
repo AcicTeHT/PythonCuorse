@@ -6,7 +6,7 @@
 # print(err_gen)
 # for item in err_gen:
 #     print(item)
-
+#
 def f_gen(m):
     s = 1
     for n in range(1,m):
@@ -16,5 +16,15 @@ a = f_gen(5)
 print(a)
 for i in a:
     print(i)
+
+
+# def iterate(x0, m):
+#     x = x0
+#     while True:
+#         yield x  # вместо print()
+#         x *= m
+#
+#
+# iterate(1, 1.1)
 
 
