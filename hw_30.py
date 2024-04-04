@@ -19,7 +19,10 @@ class Student(Human):
     def __str__(self):
         return f"{self.gender} {self.age} {self.first_name} {self.last_name} {self.record_book}"
 
-
+class ErrorIntegerInGroup(Exception):
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
 class Group:
     max_students= 10
     def __init__(self, number):
@@ -30,7 +33,7 @@ class Group:
 
     def add_student(self, student):
         if len(self.group) >= self.max_students:
-            raise Exception("Досягнуто максимальної кількості студентів у групі")
+            raise ErrorIntegerInGroup("Досягнуто максимальної кількості студентів у групі")
         self.group.add(student)
 
 
@@ -75,5 +78,5 @@ gr.add_student(st7)
 gr.add_student(st8)
 gr.add_student(st9)
 gr.add_student(st10)
-gr.add_student(st11)
+# gr.add_student(st11)
 print(gr)

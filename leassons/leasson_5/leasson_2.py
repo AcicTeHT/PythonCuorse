@@ -1,26 +1,24 @@
 
+class UserException(Exception):
 
-import functools
-import time
-def cache(func):
-    data = {}
-    def wrapper(*args):
-        if args in data:
-            return data[args]
-        else:
-            result = func(*args)
-            data[args] = result
-            return result
-    return wrapper
+    def __init__(self, message, x):
+        super().__init__()
+        self.message = message
+        self.x = x
 
-@cache
-def fibonacci(n):
-    if n in (0, 1):
-        return n
-    else:
-        return fibonacci(n-1) + fibonacci(n-2)
+    def get_exception_message(self):
+        return self.message
 
-start = time.time()
-res = fibonacci(250)
-print(res)
-print(time.time() - start)
+number = int(input("Input positive number: "))
+
+def positiv(num):
+    if num < 0:
+        raise UserException("Negative number value", num)
+    return num
+
+try:
+    a = positiv(number)
+except UserException as err:
+#     print(err.get_exception_message())
+    print(err.x)
+    print(err.message)
